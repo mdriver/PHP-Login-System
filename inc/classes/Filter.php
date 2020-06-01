@@ -1,12 +1,11 @@
-<?php 
+<?php
 
-    // If there is no constant defined called _CONFIG_, do not load this file
-    if(!defined('__CONFIG__')) {
-        exit('You do not have a config file');
-    }
+// If there is no constant defined called __CONFIG__, do not load this file 
+if(!defined('__CONFIG__')) {
+	exit('You do not have a config file');
+}
 
-class Filter 
-{
+class Filter {
 	
 	/**
 	 *  @param	string	$string		String to filter before putting inside InnoDB
@@ -46,7 +45,5 @@ class Filter
 	public static function Int( $integer ) {
 		return (int) $integer = filter_var( $integer , FILTER_SANITIZE_NUMBER_INT);
 	}
-
 }
-	
 ?>
